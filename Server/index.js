@@ -27,14 +27,7 @@ mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("Mongoose database connected");
 
         const server = http.createServer(app);
-        const io = new Server(server, {
-            cors: {
-                origin: "http://localhost:5173", // Adjust to your frontend origin
-                methods: ["GET", "POST"],
-                allowedHeaders: ["Content-Type"],
-                credentials: true
-            }
-        });
+        const io = new Server(server);
 
         io.on('connection', (socket) => {
             console.log('New user connected:', socket.id);
