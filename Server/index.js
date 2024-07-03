@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import userRoutes from './routes/user.js'; // Assuming your routes are in auth.js
+import userRoutes from './routes/user.js'; // Assuming your routes are in user.js
 import http from 'http';
 import { Server } from 'socket.io';
 
@@ -57,6 +57,9 @@ mongoose.connect(DB_URL)
     server.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
     });
+
+    // Export app for serverless functions or other environments
+    module.exports = app;
 })
 .catch((error) => {
     console.error("Error connecting to the database", error);
