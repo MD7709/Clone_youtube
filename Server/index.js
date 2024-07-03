@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 app.use('/user', userRoutes);
 
 const PORT = process.env.PORT || 4000;
-const DB_URL = process.env.CONNECTION_URL;
+const DB_URL = process.env.CONNECTION_URL || 'mongodb://localhost:27017/mydatabase';
 
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
