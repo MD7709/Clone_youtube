@@ -58,9 +58,10 @@ mongoose.connect(DB_URL)
         console.log(`Server running on port ${PORT}`);
     });
 
-    // Export app for serverless functions or other environments
-    module.exports = app;
+
 })
 .catch((error) => {
     console.error("Error connecting to the database", error);
 });
+
+export default app;
