@@ -1,0 +1,275 @@
+.container_library
+{
+    display: flexbox;
+    position: sticky;
+    height: 100%;
+    top: 0;
+}
+
+.Channel_detail
+{
+    display: flex;
+}
+.Library_account
+{
+    display: flex;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: #f2f2f2;
+    justify-content: center;
+    margin: 1.5rem;
+    margin-top: 2rem;
+}
+.points_ACC
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.Current_logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.Current_logo span
+{
+    font-size: 50px;
+}
+.channel_Name
+{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.Channel_title
+{
+    color: rgb(0, 0, 0);
+}
+.Channel_title h6
+{
+    font-size: 40px;
+}
+.Channel_Id
+{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 8px;
+}
+.Channel_Id span 
+{
+    color: #525050;
+}
+.channel_btn
+{
+    display: flex;
+    gap: 10px;
+   
+}
+.Channel_btn_button
+{
+    height: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #f2f2f2;
+    color: #000000;
+    gap: 10px;
+    font-size: 12px;
+}
+.Channel_btn_button:hover
+{
+    background-color: #dfdfdf;
+}
+.Channel_btn_button span
+{
+    display: flex;
+    justify-content: center;
+
+}
+.Library_history_contaienr
+{
+   margin: 3rem 2rem;
+}
+.historyname
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.history_title p
+{
+    color: #0f0f0f;
+    font-weight: bolder;
+
+}
+.History_Icon
+{
+   display: flex;
+   color: #0f0f0f;
+   gap: 5px;
+}
+.histoty_btn_button
+{
+    border: 1px solid white;
+    background-color: transparent;
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    color: #fff;
+}
+.histoty_btn_button:hover
+{
+    background-color: #424141; 
+}
+.history_video
+{
+     cursor: pointer;
+    margin: 0.4rem;
+    margin-bottom: 0;
+    width: 30%;
+    height: 70%;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.532)
+}
+.Video_detail_libray
+{
+    width: 30%;
+    }
+.Video_detail_libray h4
+{
+    font-size: 15px;
+    margin-left: 10px;
+    color: #0f0f0f;
+
+}
+.Video_detail_libray p
+{
+    font-size: 12px;
+    margin-left: 10px;
+    color: rgb(125, 125, 125);
+
+}
+.history_title
+{
+    margin-left: 10px;
+}
+.Histroy_icon_p
+{
+    font-size: larger;
+}
+.ClipSection p 
+{
+    font-size: small;
+}
+
+.div_button
+{
+    border-radius: 10px;
+    border: none;
+    background: none;
+    color: #272727;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.div_button:hover
+{
+    color: #4a4848;
+    height: 25px;
+}
+.Channel_id_b
+{
+
+    color: #525050;
+}
+.Channel_id_dot
+{
+    width: 4px;
+    height: 4px;
+    background-color: #525050;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1200px) {
+    .history_video {
+      width: 45%;
+      height: auto;
+    }
+    
+    .Video_detail_libray {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container_library {
+      flex-direction: column;
+      align-items: center;
+    }
+    .Channel_detail
+    {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    }
+    .channel_Name
+    {
+        display: flex;
+        align-items: center;
+    }
+    
+    .history_video {
+      width: 80%;
+      height: auto;
+    }
+  
+    .Video_detail_libray {
+      width: 80%;
+    }
+    
+    .channel_btn {
+      flex-direction: row;
+    }
+    
+    .historyname {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .histoty_btn_button {
+      width: 140%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .history_video {
+      width: 100%;
+      height: auto;
+    }
+    
+    .Video_detail_libray {
+      width: 100%;
+    }
+    
+    .Channel_title h6 {
+      font-size: 20px;
+    }
+  
+    .Channel_Id {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

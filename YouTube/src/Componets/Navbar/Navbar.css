@@ -1,0 +1,123 @@
+.container_Navbar {
+    display: flex;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 56px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.logo_navbar:hover {
+    background-color: rgb(218, 218, 218);
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.logo_img {
+    height: 56.5px;
+}
+
+.Navbar_last {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+.points
+{
+    display: flex;
+    margin-top: 15px;
+}
+.Create_Video, .Notification {
+    cursor: pointer;
+}
+
+.Current_user_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d3d2d2;
+}
+
+.Logo_app {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0;
+    
+    
+}
+
+.btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container_Navbar {
+        height: auto;
+        margin-right: 22px;
+    }
+
+    .logo_navbar, .logo_img {
+        margin-bottom: 10px;
+    }
+
+    .Navbar_last {
+        display: none;
+     }
+
+    .Create_Video, .Notification, .btn {
+        display: none; 
+    }
+
+    .logo_navbar {
+        display: none;
+    }
+    .Cuurent_user_logo {
+        display: none;
+    }
+    .Notification
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container_Navbar {
+        display: flex;
+    }
+
+    .logo_navbar, .logo_img {
+        margin-bottom: 10px;
+    }
+
+    .Navbar_last {
+       display: none;
+    }
+
+    .Cuurent_user_logo {
+        display: none;
+    }
+    .Notification
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,48 @@
+.video_detail_Container {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    max-height: 150px; /* Initial max-height, adjust as needed */
+  }
+  
+  .View_hour {
+    font-size: 12px;
+    color: #1e1e1e;
+  }
+  
+  article {
+    font-size: 14px;
+    color:#1e1e1e;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 20px; /* Initial max-height for one line, adjust as needed */
+  }
+  
+  .expanded article {
+    max-height: none; /* Show full content when expanded */
+  }
+  
+  .showMoreButton {
+    background-color: transparent;
+    color: #1e1e1e;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .showMoreButton:focus {
+    outline: none;
+  }
+  
+  .showMoreButton:hover {
+    text-decoration: underline;
+  }
+  
+  .showMoreButton:active {
+    transform: translateY(1px);
+  }
+  

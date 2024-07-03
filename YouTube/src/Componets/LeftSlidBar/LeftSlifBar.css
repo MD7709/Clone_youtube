@@ -1,0 +1,131 @@
+.container_leftSlidbar {
+    background-color: rgb(255, 255, 255);
+    width: 4.7rem;
+    height: calc(100vh - 3.55rem);
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-top: 1rem;
+}
+
+.icon_slidbar {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.9rem;
+}
+
+.Home_icon_slidbar {
+    margin: auto; 
+    color: #000;
+}
+
+.Home_icon_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    padding: 0.2rem;
+    color: black;
+}
+
+.icon_slidbar:hover,
+.icon_slidbar:active {
+    color: #030303;
+    background-color: #f2f2f2;
+}
+
+.Container_Draw {
+    position: absolute;
+    z-index: 500;
+    width: 100vw;
+    display: flex;
+}
+    
+.Container_Draw_2 {
+    height: calc(100vh - 3.6rem);
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+    width: 15rem;
+}
+
+.DrawLeft_Slid,
+.Library_draw_Left {
+    padding-top: 0.5rem;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.293);
+}
+
+.Icon_Slid_div p {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.Subscription_Draw {
+    color: black;
+}
+
+.Subscription_Draw h5 {
+    text-decoration: none;
+    margin: 20px 10px;
+}
+
+.Channel_Draw {
+    border: 1px solid;
+    background-color: rgb(255, 16, 16);
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.Icon_Slid_div1 p 
+{
+    display: flex;
+    align-items: center;  
+    cursor: pointer;  
+    text-decoration: none;
+}
+.container_Dreaw_3
+{
+    flex-grow: 1;
+}
+@media (max-width: 768px) {
+    .container_leftSlidbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4.7rem; 
+        z-index: 1000;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px; 
+    }
+
+    .icon_slidbar {
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 0.9rem;
+    }
+
+    .icon_slidbar:hover,
+    .icon_slidbar:active {
+        color: aliceblue;
+        background-color: rgb(65, 65, 65);
+    }
+
+    .Container_Draw_2 {
+        display: none;
+    }
+}

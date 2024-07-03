@@ -1,0 +1,41 @@
+.Search_list {
+    background-color: white;
+    width: 90.75%;
+    position: absolute;
+    top: 2.7rem;
+    height: fit-content;
+    z-index: 91;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 1px inset rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .Title_item {
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Title_item:hover {
+    background-color: rgba(166, 202, 234, 0.516);
+  }
+  
+  .Search_item_icon {
+    color: gray;
+    font-size: 1.2rem;
+  }
+  
+  .Title_text {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,129 @@
+.Serach_Container {
+    margin-top: 0.2rem;
+    flex-grow: 2;
+    display: flex;
+    height: 2rem;
+    justify-content: center; 
+    align-items: center;
+}
+
+.Serach_input2 {
+    display: flex;
+}
+
+.Serach_div {
+    display: flex;
+    margin: auto;
+    position: relative;
+    z-index: 91;
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+}
+
+.SerachBox_input {
+    background-color: #fff;
+    width: 100%; 
+    border: 1px solid rgb(128, 128, 128, 0.4);
+    color: #000000;
+    text-align: start;
+    height: 40px;
+    padding-left: 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.Search_icon_btn {
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid rgb(128, 128, 128, 0.4);
+    background-color: #f8f8f8;
+    height: 40px;
+    width: 64px;
+}
+
+.Search_icon {
+    cursor: pointer;
+    padding: 0.75rem;
+    height: 16px;
+    padding-right: 20px;
+}
+
+.SerachBox_input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.SerachBox_input::placeholder {
+    color: #aaa;
+    opacity: 1;
+    transition: color 0.3s;
+}
+
+.Mic_icon {
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 0.8rem;
+    background-color: #f8f8f8;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+    .Serach_Container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .Serach_input2 {
+        margin-left: 0;
+    }
+    .SerachBox_input {
+        width: 90%;
+        max-width: 90%;
+        margin-bottom: 10px; /
+    }
+
+    .Search_icon_btn {
+        width: 20%;
+        max-width: 90%;
+    }
+
+    .Mic_icon {
+        display: none; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .Serach_Container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .SerachBox_input {
+        width: 60%;
+        max-width: 80%;
+    }
+
+    .Search_icon_btn {
+        width: 20%;
+        max-width: 80%;
+    }
+    .Serach_div 
+    {
+        display: flex;
+        justify-content: end;
+    }
+    .Mic_icon {
+        display: none; /* Hide the microphone icon */
+    }
+}

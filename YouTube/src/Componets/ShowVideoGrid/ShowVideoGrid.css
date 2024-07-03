@@ -1,0 +1,47 @@
+.container_showVideo_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.videoBox {
+    width: 288px;
+    cursor: pointer;
+    height: 252px; 
+}
+
+@media (max-width: 1200px) {
+    .videoBox {
+        width: 85%; 
+    }
+}
+
+@media (max-width: 992px) {
+    .videoBox {
+        width: 30%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .container_showVideo_grid {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .videoBox {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .videoBox {
+        width: 100%; 
+        height: auto;
+    }
+}

@@ -1,0 +1,93 @@
+.Video_showVideo {
+    cursor: pointer;
+    width: 242px;
+    height: 136px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.532);
+}
+
+.Video_Detail {
+    width: 100%;
+    max-width: 288px;
+    color: #000;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.Title_video_des {
+    font-size: 15px;
+    margin: 0;
+    text-align: left;
+}
+
+.Video_view_uploa_time {
+    font-size: 13px;
+    color:#606060;
+    margin: 0.2rem 0;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+.dot {
+    height: 4px;
+    width: 4px;
+    background-color: #606060;
+    border-radius: 100%;
+    margin: 0 0.5rem;
+}
+
+.Cuurent_user_logo_Video {
+    display: flex;
+    padding-left: 9px;
+}
+
+.Logo_app_video {
+    width: 2rem;
+    height: 2rem;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.video_Dsc {
+    display: flex;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .Video_Detail .Video_view_uploa_time {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Video_showVideo {
+        height: auto; 
+        width: 100%;
+        
+    }
+    .Video_Detail {
+        font-size: 9px;
+    }
+    .Title_video_des {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Video_Detail {
+        font-size: 8px;
+    }
+    .Title_video_des {
+        font-size: 10px;
+    }
+}

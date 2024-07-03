@@ -1,0 +1,49 @@
+.navlist_home {
+  color: #0f0f0f;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  display: flex;
+  overflow-x: auto;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 25px 20px -20px;
+  top: 0;
+  padding: 0.5rem 0;
+}
+
+.navlist_home::-webkit-scrollbar {
+  height: 0.2px;
+}
+
+.navlist_home::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+}
+
+.Btn_home {
+  background-color:#f2f2f2;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.Btn_home:hover {
+  background-color: rgb(128, 128, 128);
+}
+
+@media (max-width: 768px) {
+  .conatienr_home_page_2
+  {
+    width: 100%;
+  }
+  .navlist_home {
+      flex-wrap: nowrap; 
+      overflow-x: auto; 
+      padding: 0.5rem 1rem;
+  }
+
+  .Btn_home {
+      min-width: auto;
+      white-space: nowrap;
+  }
+}
