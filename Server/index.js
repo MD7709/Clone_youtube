@@ -30,7 +30,14 @@ mongoose.connect(DB_URL, {
     console.log("Mongoose database connected");
 
     const server = http.createServer(app);
-    const io = new Server(server);
+    const io = new Server(server, {
+        cors: {
+            origin: 'http://localhost:5173',
+            methods: ['GET', 'POST'],
+            allowedHeaders: ['Content-Type'],
+            credentials: true,
+        }
+    });
 
     io.on('connection', (socket) => {
         console.log('New user connected:', socket.id);
