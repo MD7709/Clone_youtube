@@ -1,36 +1,54 @@
 import mongoose from 'mongoose';
-import users from '../models/auth.js';
+import User from '../models/auth.js';
 
 export const updateChannelData = async (req, res) => {
     const { id: _id } = req.params;
     const { channelName, channelId } = req.body;
 
-    console.log('Received ID:', _id);
-    console.log('Received Data:', { channelName, channelId });
-
     if (!mongoose.Types.ObjectId.isValid(_id)) {
-        return res.status(404).send("Channel Unavailable");
+        return res.status(404).send("User not found");
     }
 
     try {
-        const updateData = await users.findByIdAndUpdate(
+        const updatedUser = await User.findByIdAndUpdate(
             _id,
-            {
-                $set: {
-                    'channelName': channelName,
-                    'channelId': channelId
-                }
-            },
+            { channelName, channelId },
             { new: true }
         );
 
-        if (!updateData) {
+        if (!updatedUser) {
             return res.status(404).send("User not found");
         }
 
-        res.status(200).json(updateData);
+        res.status(200).json(updatedUser);
     } catch (error) {
-        console.log('Update Error:', error);
-        res.status(500).json({ message: error.message });
+        console.error("Update error:", error);
+        res.status(500).json({ message: "Something went wrong" });
+    }
+};
+
+export const updatePoints = async (req, res) => {
+    const { id: _id } = req.params;
+    const { points } = req.body;
+
+    if (!mongoose.Types.ObjectId.isValid(_id)) {
+        return res.status(404).send("User not found");
+    }
+
+    try {
+        const updatedUser = await User.findByIdAndUpdate(
+            _id,
+            { $inc: { points } },
+            { new: true }
+        );
+
+        if (!updatedUser) {
+            return res.status(404).send("User not found");
+        }
+
+        res.status(200).json(updatedUser);
+    } catch (error) {
+        console.error("Update error:", error);
+        res.status(500).json({ message: "Something went wrong" });
     }
 };

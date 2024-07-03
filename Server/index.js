@@ -10,7 +10,7 @@ import { Server } from 'socket.io';
 dotenv.config();
 
 const app = express();
-app.use(cors()); // Enable CORS for all routes
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
@@ -29,7 +29,7 @@ mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
         const server = http.createServer(app);
         const io = new Server(server, {
             cors: {
-                origin: "http://localhost:5173", // Allow this origin
+                origin: "http://localhost:5173", // Adjust to your frontend origin
                 methods: ["GET", "POST"],
                 allowedHeaders: ["Content-Type"],
                 credentials: true
