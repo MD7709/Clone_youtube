@@ -1,9 +1,11 @@
+// index.js
+
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import userRoutes from './routes/user.js';
+import userRoutes from './routes/user.js'; // Assuming your routes are in auth.js
 import http from 'http';
 import { Server } from 'socket.io';
 
@@ -30,14 +32,7 @@ mongoose.connect(DB_URL, {
     console.log("Mongoose database connected");
 
     const server = http.createServer(app);
-    const io = new Server(server, {
-        cors: {
-            origin: 'http://localhost:5173',
-            methods: ['GET', 'POST'],
-            allowedHeaders: ['Content-Type'],
-            credentials: true,
-        }
-    });
+    const io = new Server(server);
 
     io.on('connection', (socket) => {
         console.log('New user connected:', socket.id);
